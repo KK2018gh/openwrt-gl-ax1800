@@ -707,6 +707,7 @@
 		<tr><td width="33%"><%:Uptime%></td><td id="uptime">-</td></tr>
 		<tr><td width="33%"><%:Load Average%></td><td id="loadavg">-</td></tr>
 		<tr><td width="33%"><%:CPU usage (%)%></td><td id="cpuusage">-</td></tr>
+		<tr><td width="33%"><%:CPU temperature (*C)%></td><td><%=luci.sys.exec("cat /sys/devices/virtual/thermal/thermal_zone0/temp") or "?"%></td></tr>
 	</table>
 </fieldset>
 
