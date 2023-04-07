@@ -28,7 +28,7 @@ case "$DISTRIB_TARGET" in
 			uci_write_config 0 ondemand 864000 1800000 10 50
 		else
 			# IPQ6000
-			uci_write_config 0 ondemand 864000 1200000 10 50
+			uci_write_config 0 ondemand 1056000 1608000 10 35
 		fi
 		;;
 	"ipq806x/generic")
