@@ -7,7 +7,7 @@
 
 1. **不要用 root 用户进行编译**
 2. 国内用户编译前最好准备好梯子
-3. 默认登陆IP 192.168.1.1 密码 password
+3. 默认登陆IP 192.168.6.254 密码 password
 
 ## 编译命令
 
@@ -30,8 +30,8 @@
 3. 下载源代码，更新 feeds 并选择配置
 
    ```bash
-   git clone https://github.com/coolsnowwolf/lede
-   cd lede
+   git clone https://github.com/KK2018gh/openwrt-gl-ax1800.git
+   cd openwrt-gl-ax1800
    ./scripts/feeds update -a
    ./scripts/feeds install -a
    make menuconfig
@@ -41,7 +41,7 @@
 （-j 后面是线程数，第一次编译推荐用单线程）
 
    ```bash
-   make download -j8
+   make download -j8 V=s
    make V=s -j1
    ```
 
@@ -52,12 +52,12 @@
 二次编译：
 
 ```bash
-cd lede
+cd openwrt-gl-ax1800
 git pull
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 make defconfig
-make download -j8
+make download -j8 V=s
 make V=s -j$(nproc)
 ```
 
